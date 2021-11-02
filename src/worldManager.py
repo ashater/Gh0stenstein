@@ -13,6 +13,8 @@ class WorldManager(object):
               load_image(pygame.image.load("pics/items/greenlight.png").convert(), False, colorKey = (0,0,0)),
               load_image(pygame.image.load("pics/items/pinky_l.png").convert(), False, colorKey = (0,0,0)),
               load_image(pygame.image.load("pics/items/pinky_r.png").convert(), False, colorKey = (0,0,0)),
+              load_image(pygame.image.load("pics/items/bullet_gen.bmp").convert(), False, colorKey=(0, 0, 0)),
+
         ]
         
         self.background = None
@@ -37,6 +39,7 @@ class WorldManager(object):
               ]
         self.camera = Camera(x,y,dirx,diry,planex,planey)
         self.worldMap = worldMap
+
     def draw(self, surface, sprite_positions):
         w = surface.get_width()
         h = surface.get_height()
